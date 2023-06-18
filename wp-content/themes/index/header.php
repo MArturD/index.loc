@@ -33,10 +33,10 @@
                 <div class="right_side">
                     <nav>
                         <ul>
-                            <li><a href="">Портфолио</a></li>
-                            <li><a href="">О нас</a></li>
-                            <li><a href="">Услуги</a></li>
-                            <li><a href="">Контакты</a></li>
+                            <li><a href="#portfolio">Портфолио</a></li>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
                         </ul>
                     </nav>
 

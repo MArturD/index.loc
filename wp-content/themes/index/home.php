@@ -12,12 +12,11 @@ Template Name: home
             <div class="cover_wrap">
                 <div class="cover_left">
                     <div class="cover_text">
-                        <p class="tagline">
-                            Преобразуем вашу веб-идею в действительность
-                        </p>
+                        <h1 class="tagline">
+                            <?php the_field( 'main-heading' ); ?>
+                        </h1>
                         <p class="tagline_description">
-                            Вы получаете привлекательный дизайн и безупречную функциональность в сжатые сроки и по
-                            доступной стоимости.
+                            <?php the_field( 'main-subtitle' ); ?>
                         </p>
                     </div>
                     <div class="cover_button">
@@ -42,7 +41,7 @@ Template Name: home
     </div>
 </div>
 
-<div class="slider">
+<div class="slider" id="portfolio">
     <div class="wrap">
         <div id="slider_text">
             <p class="project_text">ПРОЕКТЫ</p>
@@ -114,56 +113,22 @@ if( $myposts ){
     </div>
 
 </div>
-<div class="about">
+<div class="about" id="about">
     <div class="wrap">
         <div class="about_wrap">
             <div class="about_title"><p>О нас</p></div>
             <div class="about_information">
-                <div class="title_information"><p>Наша компания специализируется на веб-разработке и использует
-                    передовые технологии и инструменты, чтобы обеспечить клиентам лучшие результаты.</p></div>
+                <div class="title_information"><p><?php the_field( 'about-title' ); ?></p></div>
                 <div class="about_description">
                     <div class="left_description">
-                        <p>Наш подход основан на полном цикле разработки сайтов, что означает, что мы охватываем все
-                            этапы создания вашего сайта. Начиная с исследования и понимания ваших потребностей и целей,
-                            мы разрабатываем уникальный дизайн, который не только привлекает внимание, но и предлагает
-                            превосходный пользовательский опыт. </p>
-                        <p>Наш подход основан на полном цикле разработки сайтов, что означает, что мы охватываем все
-                            этапы создания вашего сайта. Начиная с исследования и понимания ваших потребностей и целей,
-                            мы разрабатываем уникальный дизайн, который не только привлекает внимание, но и предлагает
-                            превосходный пользовательский опыт. </p>
+                        <p><?php the_field( 'about-description-1' ); ?></p>
+                        <p><?php the_field( 'about-description-2' ); ?></p>
                     </div>
                     <div class="right_description">
-                        <p>Наша команда разработчиков и дизайнеров обладает глубокими знаниями и опытом, что позволяет
-                            нам создавать индивидуальные решения, которые точно соответствуют вашим требованиям. Мы
-                            также обеспечиваем полное тестирование и оптимизацию вашего сайта, чтобы гарантировать его
-                            высокую производительность и быструю загрузку.</p>
-                        <p>В Index мы не только создаем веб-сайты, но и строим долгосрочные партнерства с нашими
-                            клиентами. Мы всегда готовы поддержать вас после запуска сайта, предлагая техническую
-                            поддержку, обновления и дальнейшее развитие.</p>
+                        <p><?php the_field( 'about-description-3' ); ?></p>
+                        <p><?php the_field( 'about-description-4' ); ?></p>
                     </div>
                 </div>
-<!--                --><?php
-//                global $post;
-//
-//                $myposts = get_posts([
-//                    'numberposts' => -1,
-//                    'category'    => 3,
-//                ]);
-//
-//                if( $myposts ){
-//                    foreach( $myposts as $post ){
-//                        setup_postdata( $post );
-//                        ?>
-<!--                       --><?php
-//                        $staff = [
-//                        ['id' => 1, 'name' => 'John1', 'image' => 'john.png', 'text' => '1'],
-/*                            ['id' => 2, 'name' => '<?php the_title(); ?>', 'image' => '<?php the_post_thumbnail(); ?>', 'text' => '<?php the_content(); ?>'],*/
-//                            ['id' => 3, 'name' => 'John3', 'image' => 'john.png3', 'text' => '3'],
-//
-//                        ];
-//                        ?>
-<!--                    --><?php //} } wp_reset_postdata(); // Сбрасываем $post ?>
-
 
                 <?php
                 global $post;
@@ -189,23 +154,11 @@ if( $myposts ){
                                     <?php the_content(); ?>
                                 </div>
                                 <div class="description_avatar">
-                                    <div class="avatar"><?php the_post_thumbnail(); ?></div>
+                                    <div class="avatar card-border"><?php the_post_thumbnail(); ?></div>
                                     <div class="avatar_name"><p><?php the_title(); ?></p></div>
                                 </div>
                             </div>
                                 <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
-
-<!--                            --><?php //foreach ($staff as $person): ?>
-<!--                            <div class="person" id="block-person_--><?php //echo $person["id"] ?><!--">-->
-<!--                                <div class="description_title">-->
-<!--                                --><?php //echo $person["text"] ?>
-<!--                            </div>-->
-<!--                            <div class="description_avatar">-->
-<!--                                <div class="avatar">--><?php //echo $person["image"] ?><!--</div>-->
-<!--                                <div class="avatar_name"><p>--><?php //echo $person["name"] ?><!--</p></div>-->
-<!--                            </div>-->
-<!--                            </div>-->
-<!--                            --><?php //endforeach; ?>
                         </div>
                         <div class="team_people">
                             <?php
@@ -213,29 +166,20 @@ if( $myposts ){
                                 foreach( $myposts as $post ){
                                     setup_postdata( $post );
                                     ?>
-                                    <div class="cards" id="<?php the_ID(); ?>" onclick="setVisible(this) ">
+                                    <div class="cards card-border" id="<?php the_ID(); ?>" onclick="setVisible(this) ">
                                         <?php the_post_thumbnail(); ?>
                                     </div>
 
 
                                 <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
                         </div>
-<!--                        <div class="team_people">-->
-<!--                            --><?php //foreach ($staff as $person): ?>
-<!--                            <div class="cards" id="--><?php //echo $person["id"] ?><!--" onclick="setVisible(this) ">-->
-<!--                                --><?php //echo $person["image"] ?>
-<!--                            </div>-->
-<!--                            --><?php //endforeach; ?>
-<!--                            <div class="cards"><img src="--><?php //bloginfo('template_url'); ?><!--/assets/img/icons/avatar_murat.svg"></div>-->
-<!--                            <div class="cards"><img src="--><?php //bloginfo('template_url'); ?><!--/assets/img/icons/avatar_murat.svg"></div>-->
-<!--                        </div>-->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="services">
+<div class="services" id="services">
     <div class="wrap">
         <div class="services_title  ">УСЛУГИ</div>
         <div class="services_wrap">
@@ -251,33 +195,29 @@ if( $myposts ){
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
-                <div class="flex_card"><p class="card_name">Лендинг</p>
-                    <p class="card_info">Имиджевые лендинги, посадочные страницы, сайты-визитки, промо. Состоит обычно
-                        из 7 — 12 блоков</p></div>
+                <div class="flex_card"><p class="card_name">Многостраничный сайт</p>
+                    <p class="card_info">Сайт-портфолио, интернет-магазин, сайт о компании и ее услугах.</p></div>
                 <div class="flex_button">
                     <button class="card_button">Выбрать</button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
-                <div class="flex_card"><p class="card_name">Лендинг</p>
-                    <p class="card_info">Имиджевые лендинги, посадочные страницы, сайты-визитки, промо. Состоит обычно
-                        из 7 — 12 блоков</p></div>
+                <div class="flex_card"><p class="card_name">Обсудить проект</p>
+                    <p class="card_info">Если у вас нестандартный проект, или вы не можете определиться какой формат вам подойдет — смело пишите, все обсудим.</p></div>
                 <div class="flex_button">
                     <button class="card_button">Выбрать</button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
-                <div class="flex_card"><p class="card_name">Лендинг</p>
-                    <p class="card_info">Имиджевые лендинги, посадочные страницы, сайты-визитки, промо. Состоит обычно
-                        из 7 — 12 блоков</p></div>
+                <div class="flex_card"><p class="card_name">UI/UX</p>
+                    <p class="card_info">Проектирование любых пользовательских интерфейсов.</p></div>
                 <div class="flex_button">
                     <button class="card_button">Выбрать</button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
-                <div class="flex_card"><p class="card_name">Лендинг</p>
-                    <p class="card_info">Имиджевые лендинги, посадочные страницы, сайты-визитки, промо. Состоит обычно
-                        из 7 — 12 блоков</p></div>
+                <div class="flex_card"><p class="card_name">Разработка мобильных приложений</p>
+                    <p class="card_info">Создание надежных и полнофункциональных мобильных приложений.</p></div>
                 <div class="flex_button">
                     <button class="card_button">Выбрать</button>
                 </div>
@@ -291,14 +231,18 @@ if( $myposts ){
             <div class="stages_title"><p>ЭТАПЫ РАЗРАБОТКИ</p></div>
             <div class="process_flex">
             <ol class="process_work">
-                <li class="active_process process_card" ><span>1.</span><p>Заявка на проект и созвон</p></li>
-                <li class="process_card" ><span>2.</span><p>Коммерческое предложение и договор</p></li>
-                <li class="process_card" ><span>3.</span><p>Сбор данных и прототип</p></li>
-                <li class="process_card" ><span>4.</span><p>Дизайн всех страниц в фигме</p></li>
-                <li class="process_card" ><span>5.</span><p>Разработка сайта</p></li>
+                <li class="active_process process_card" onclick="process(this)" id="1" ><span>1.</span><p>Заявка на проект и созвон</p></li>
+                <li class="process_card" id="2"><span>2.</span><p>Коммерческое предложение и договор</p></li>
+                <li class="process_card" id="3"><span>3.</span><p>Сбор данных и прототип</p></li>
+                <li class="process_card" id="4"><span>4.</span><p>Дизайн всех страниц в фигме</p></li>
+                <li class="process_card" id="5"><span>5.</span><p>Разработка сайта</p></li>
             </ol>
             <div class="process_description">
-                <p>Первым шагом в нашем сотрудничестве является подача заявки на проект. Это дает нам представление о том, что вы ищете и погрузиться в ваш проект глубже.</p>
+                <div class="block-description" id="1">Первым шагом в нашем сотрудничестве является подача заявки на проект. Это дает нам представление о том, что вы ищете и погрузиться в ваш проект глубже.</div>
+                <div class="block-description" id="2"></div>
+                <div class="block-description" id="3"></div>
+                <div class="block-description" id="4"></div>
+                <div class="block-description" id="5"></div>
             </div>
             </div>
         </div>

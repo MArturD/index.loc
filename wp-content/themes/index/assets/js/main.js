@@ -37,3 +37,28 @@ $(document).ready(function() {
         $(`#block-person_${id}`).addClass('visible');
     }
 
+function toggleBlocks() {
+    $('.cards').click(function() {
+        $('.cards').removeClass('active_card');
+        $(this).addClass('active_card');
+    });
+}
+toggleBlocks();
+function active_process() {
+    $('.process_card').click(function() {
+        $('.process_card').removeClass('active_process');
+        $(this).addClass('active_process');
+    });
+}
+active_process();
+
+function process (staff) {
+    let id = $(staff).attr('id');
+    $('.block-description').each(function () {
+        $(this).removeClass('ddr');
+    })
+    $(`#` + id).addClass('ddr');
+}
+
+
+

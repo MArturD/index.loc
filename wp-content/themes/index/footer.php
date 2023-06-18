@@ -9,18 +9,18 @@
             <div class="footer_navigation">
                 <p class="footer_title">Навигация</p>
                 <ul>
-                    <li><a href="">Портфолио</a></li>
-                    <li><a href="">О нас</a></li>
-                    <li><a href="">Услуги</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
                 </ul>
             </div>
-            <div class="footer_social">
+            <div class="footer_social" id="contacts">
                 <p class="footer_number">+7 (921) 157-77-77</p>
                 <p class="footer_mail">info@gmail.com</p>
                 <div class="social_cards">
-                    <div class="social_card"><a href="<?php the_field( 'vk-link' ); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/tg-icon.svg"></a></div>
-                    <div class="social_card"><a href=""><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/insta-icon.svg"></a></div>
-                    <div class="social_card"><a href=""><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/email-icon.svg"></a></div>
+                    <div class="social_card"><a href="<?php the_field( 'tg-link' ); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/tg-icon.svg"></a></div>
+                    <div class="social_card"><a href="<?php the_field( 'insta-link' ); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/insta-icon.svg"></a></div>
+                    <div class="social_card"><a href="<?php the_field( 'email-link' ); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/email-icon.svg"></a></div>
                 </div>
             </div>
         </div>
