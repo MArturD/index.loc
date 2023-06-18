@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
     $(`#block-person_46`).addClass('visible');
+    $(`#46`).addClass('active_card');
+    $(`#description-process-1`).addClass('ddr');
+    $(`#process-1`).addClass('active_process');
 });
     $('.autoplay').slick({
         width: '2511px',
@@ -57,8 +60,30 @@ function process (staff) {
     $('.block-description').each(function () {
         $(this).removeClass('ddr');
     })
-    $(`#` + id).addClass('ddr');
+    $(`#description-${id}`).addClass('ddr');
+
+    console.log(id);
 }
+
+function check() {
+    $('.examination').on('click', () => {
+        if ($('.custom-checkbox').hasClass('checked')) {
+            $('.custom-checkbox').removeClass('checked');
+        } else {
+            $('.custom-checkbox').addClass('checked');
+        }
+    });
+}
+check();
+
+$('.open-popup').click(function (e){
+    e.preventDefault();
+    $('.popup-bg').fadeIn(600);
+});
+$('.close-popup, .close').click(function (e){
+    $('.popup-bg').fadeOut(600);
+});
+
 
 
 
