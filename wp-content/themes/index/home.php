@@ -20,7 +20,7 @@ Template Name: home
                         </p>
                     </div>
                     <div class="cover_button">
-                        <button class="white-button open-popup">Оставить заявку</button>
+                        <button class="white-button  popmake-84"><?php the_field( 'submit-application' ); ?></button>
                     </div>
                 </div>
                 <div>
@@ -44,7 +44,7 @@ Template Name: home
 <div class="slider" id="portfolio">
     <div class="wrap">
         <div id="slider_text">
-            <p class="project_text">ПРОЕКТЫ</p>
+            <p class="project_text"><?php the_field( 'projects-text' ); ?></p>
         </div>
     </div>
     <div class="slider_wrap">
@@ -116,7 +116,7 @@ if( $myposts ){
 <div class="about" id="about">
     <div class="wrap">
         <div class="about_wrap">
-            <div class="about_title"><p>О нас</p></div>
+            <div class="about_title"><p><?php the_field( 'about-text' ); ?></p></div>
             <div class="about_information">
                 <div class="title_information"><p><?php the_field( 'about-title' ); ?></p></div>
                 <div class="about_description">
@@ -141,7 +141,7 @@ if( $myposts ){
 
 
                 <div class="about_team">
-                    <div class="team_title"><p>НАША КОМАНДА</p></div>
+                    <div class="team_title"><p><?php the_field( 'our-team-text' ); ?></p></div>
                     <div class="team_information">
                         <div class="team_description">
                             <?php
@@ -181,45 +181,44 @@ if( $myposts ){
 </div>
 <div class="services" id="services">
     <div class="wrap">
-        <div class="services_title  ">УСЛУГИ</div>
+        <div class="services_title  "><?php the_field( 'services-text' ); ?></div>
         <div class="services_wrap">
-            <div class="cards_description">Обратите внимание, чтобы точно назвать стоимость проекта, нам надо
-                созвониться и обсудить детали, после чего формируется коммерческое предложение.
+            <div class="cards_description">
+                <?php the_field( 'services-header' ); ?>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
-                <div class="flex_card"><p class="card_name">Лендинг</p>
-                    <p class="card_info">Имиджевые лендинги, посадочные страницы, сайты-визитки, промо. Состоит обычно
-                        из 7 — 12 блоков</p></div>
+                <div class="flex_card"><p class="card_name"><?php the_field( 'first-service-title' ); ?></p>
+                    <p class="card_info"><?php the_field( 'first-service-description' ); ?></p></div>
                 <div class="flex_button">
-                    <button class="card_button">Выбрать</button>
+                    <button class="card_button"><?php the_field( 'choose-text' ); ?></button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
-                <div class="flex_card"><p class="card_name">Многостраничный сайт</p>
-                    <p class="card_info">Сайт-портфолио, интернет-магазин, сайт о компании и ее услугах.</p></div>
+                <div class="flex_card"><p class="card_name"><?php the_field( 'second-service-title' ); ?></p>
+                    <p class="card_info"><?php the_field( 'second-service-description' ); ?></p></div>
                 <div class="flex_button">
-                    <button class="card_button">Выбрать</button>
+                    <button class="card_button"><?php the_field( 'choose-text' ); ?></button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
-                <div class="flex_card"><p class="card_name">Обсудить проект</p>
-                    <p class="card_info">Если у вас нестандартный проект, или вы не можете определиться какой формат вам подойдет — смело пишите, все обсудим.</p></div>
+                <div class="flex_card"><p class="card_name"><?php the_field( 'third-service-title' ); ?></p>
+                    <p class="card_info"><?php the_field( 'third-service-description' ); ?></p></div>
                 <div class="flex_button">
-                    <button class="card_button">Выбрать</button>
+                    <button class="card_button"><?php the_field( 'choose-text' ); ?></button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
-                <div class="flex_card"><p class="card_name">UI/UX</p>
-                    <p class="card_info">Проектирование любых пользовательских интерфейсов.</p></div>
+                <div class="flex_card"><p class="card_name"><?php the_field( 'fourth-service-title' ); ?></p>
+                    <p class="card_info"><?php the_field( 'fourth-service-description' ); ?></p></div>
                 <div class="flex_button">
-                    <button class="card_button">Выбрать</button>
+                    <button class="card_button"><?php the_field( 'choose-text' ); ?></button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
-                <div class="flex_card"><p class="card_name">Разработка мобильных приложений</p>
-                    <p class="card_info">Создание надежных и полнофункциональных мобильных приложений.</p></div>
+                <div class="flex_card"><p class="card_name"><?php the_field( 'fifth-service-title' ); ?></p>
+                    <p class="card_info"><?php the_field( 'fifth-service-description' ); ?></p></div>
                 <div class="flex_button">
-                    <button class="card_button">Выбрать</button>
+                    <button class="card_button"><?php the_field( 'choose-text' ); ?></button>
                 </div>
             </div>
         </div>
@@ -228,21 +227,21 @@ if( $myposts ){
 <div class="stages">
     <div class="wrap">
         <div class="stages_wrap">
-            <div class="stages_title"><p>ЭТАПЫ РАЗРАБОТКИ</p></div>
+            <div class="stages_title"><p><?php the_field( 'stages -development-title' ); ?></p></div>
             <div class="process_flex">
             <ol class="process_work">
-                <li class="process_card" onclick="process(this)" id="process-1" ><span>1.</span><p>Заявка на проект и созвон</p></li>
-                <li class="process_card" id="process-2" onclick="process(this)"><span>2.</span><p>Коммерческое предложение и договор</p></li>
-                <li class="process_card" id="process-3" onclick="process(this)"><span>3.</span><p>Сбор данных и прототип</p></li>
-                <li class="process_card" id="process-4" onclick="process(this)"><span>4.</span><p>Дизайн всех страниц в фигме</p></li>
-                <li class="process_card" id="process-5" onclick="process(this)"><span>5.</span><p>Разработка сайта</p></li>
+                <li class="process_card" onclick="process(this)" id="process-1" ><span>1.</span><p><?php the_field( 'first-stage' ); ?></p></li>
+                <li class="process_card" id="process-2" onclick="process(this)"><span>2.</span><p><?php the_field( 'second-stage' ); ?></p></li>
+                <li class="process_card" id="process-3" onclick="process(this)"><span>3.</span><p><?php the_field( 'third-stage' ); ?></p></li>
+                <li class="process_card" id="process-4" onclick="process(this)"><span>4.</span><p><?php the_field( 'fourth-stage' ); ?></p></li>
+                <li class="process_card" id="process-5" onclick="process(this)"><span>5.</span><p><?php the_field( 'fifth-stage' ); ?></p></li>
             </ol>
             <div class="process_description">
-                <div class="block-description" id="description-process-1">Первым шагом в нашем сотрудничестве является подача заявки на проект. Это дает нам представление о том, что вы ищете и погрузиться в ваш проект глубже.</div>
-                <div class="block-description" id="description-process-2">После звонка, как мы узнаем как можно больше о вашем проекте, мы составим индивидуальное предложение. Мы берем плату за свою работу не почасово, а индивидуально для каждого проекта. Таким образом, у вас будет полный обзор предварительных затрат.</div>
-                <div class="block-description" id="description-process-3">Прежде чем приступать к дизайну, мы разрабатываем структуру сайта на основе анализа собранных данных. </div>
-                <div class="block-description" id="description-process-4">На этом этапе мы разрабатываем дизайн-концепцию, рассматривая несколько вариантов и после выбранного вами дизайна, мы уже приступаем к дизайну всех страницы в программе Figma. Дизайн делается для десктопа и для мобильной версии.</div>
-                <div class="block-description" id="description-process-5">После согласования дизайна, макет передается разработчикам, которые начинают работать над технической частью проекта.</div>
+                <div class="block-description" id="description-process-1"><?php the_field( 'first-stage-description' ); ?></div>
+                <div class="block-description" id="description-process-2"><?php the_field( 'second-stage-description' ); ?></div>
+                <div class="block-description" id="description-process-3"><?php the_field( 'third-stage-description' ); ?></div>
+                <div class="block-description" id="description-process-4"><?php the_field( 'fourth-stage-description' ); ?></div>
+                <div class="block-description" id="description-process-5"><?php the_field( 'fifth-stage-description' ); ?></div>
             </div>
             </div>
         </div>
@@ -255,7 +254,7 @@ if( $myposts ){
             <div class="application">
                 <div class="application_title"><p>Готовы обсудить проект?</p></div>
                 <div class="application_description"><p>Оставьте заявку и мы свяжемся с вами в течение 24 часов.</p></div>
-                <button class="application_button ">Оставить заявку</button>
+                <button class="application_button "><?php the_field( 'submit-application' ); ?></button>
             </div>
         </div>
     </div>

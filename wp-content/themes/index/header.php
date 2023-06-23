@@ -33,16 +33,16 @@
                 <div class="right_side">
                     <nav>
                         <ul>
-                            <li><a href="#portfolio">Портфолио</a></li>
-                            <li><a href="#about">О нас</a></li>
-                            <li><a href="#services">Услуги</a></li>
-                            <li><a href="#contacts">Контакты</a></li>
+                            <li><a href="#portfolio"><?php the_field( 'portfolio-text' ); ?></a></li>
+                            <li><a href="#about"><?php the_field( 'about-text' ); ?></a></li>
+                            <li><a href="#services"><?php the_field( 'services-text' ); ?></a></li>
+                            <li><a href="#contacts"><?php the_field( 'contacts-text' ); ?></a></li>
                         </ul>
                     </nav>
 
                     <div class="language">
-                        <button class="language_button">RU</button>
-                        <button class="language_button">EN</button>
+                        <a class="language_button" lang="ru-RU" hreflang="ru-RU" href="http://index.loc/">RU</a>
+                        <a class="language_button" lang="en-GB" hreflang="en-GB" href="http://index.loc/en/home-english/">EN</a>
                     </div>
                 </div>
             </div>

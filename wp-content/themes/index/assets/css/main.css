@@ -19,6 +19,12 @@
 body {
     cursor: url("../img/icons/cursor-static.svg"), pointer;
 }
+a, button{
+    cursor: url("../img/icons/cursor-pointer.svg"), pointer;
+}
+.popmake-84{
+    cursor: url("../img/icons/cursor-pointer.svg"), pointer;
+}
 
 .backcolor_header {
     background: linear-gradient(131.14deg, #EBECF0 13.39%, #C6D4E9 79.35%);
@@ -1005,7 +1011,7 @@ footer{
     line-height: 120%;
     color: #414242;
 }
-.footer_navigation ul,a{
+.footer_navigation ul, .footer_navigation a{
     cursor: url("../img/icons/cursor-pointer.svg"), auto;
     margin-top: 20px;
     font-family: 'Inter';
@@ -1028,6 +1034,14 @@ footer{
     line-height: 120%;
     color: #414242;
     margin-bottom: 80px;
+}
+.footer_number a{
+    font-family: 'Vela Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 120%;
+    color: #414242;
 }
 .footer_mail{
     margin-top: 7px;
@@ -1088,11 +1102,16 @@ footer{
 }
 .privacy_policy{
     padding: 20px 0 70px 0;
+}
+.privacy_policy a{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 130%;
+    color: #414242;
+    list-style-type: none;
+    text-decoration: none;
 }
 a{
     text-decoration: none;

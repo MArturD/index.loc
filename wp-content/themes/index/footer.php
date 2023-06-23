@@ -7,16 +7,16 @@
             <?php the_custom_logo( $blog_id ); ?>
             </div>
             <div class="footer_navigation">
-                <p class="footer_title">Навигация</p>
+                <p class="footer_title"><?php the_field( 'navigation-text' ); ?></p>
                 <ul>
-                    <li><a href="#portfolio">Портфолио</a></li>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio"><?php the_field( 'portfolio-text' ); ?></a></li>
+                    <li><a href="#about"><?php the_field( 'about-text' ); ?></a></li>
+                    <li><a href="#services"><?php the_field( 'services-text' ); ?></a></li>
                 </ul>
             </div>
             <div class="footer_social" id="contacts">
-                <p class="footer_number">+7 (921) 157-77-77</p>
-                <p class="footer_mail">info@gmail.com</p>
+                <p class="footer_number"><a href=”tel:<?php the_field( 'tel-link' ); ?>”><?php the_field( 'tel-title' ); ?></a></p>
+                <p class="footer_mail"><?php the_field( 'email-title' ); ?></p>
                 <div class="social_cards">
                     <div class="social_card"><a href="<?php the_field( 'tg-link' ); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/tg-icon.svg"></a></div>
                     <div class="social_card"><a href="<?php the_field( 'insta-link' ); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/insta-icon.svg"></a></div>
