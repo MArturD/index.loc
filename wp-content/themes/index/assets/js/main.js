@@ -2,11 +2,11 @@ $(document).ready(function() {
 
     $(`#block-person_46`).addClass('visible');
     $(`#46`).addClass('active_card');
-    $(`#description-process-1`).addClass('ddr');
-    $(`#process-1`).addClass('active_process');
+    $(`#description-process-1`).addClass('checking-process');
+        $(`#process-1`).addClass('active_process');
 });
     $('.autoplay').slick({
-        width: '2511px',
+        // width: '2511px',
         arrows: true,
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
@@ -14,18 +14,20 @@ $(document).ready(function() {
         infinite: true,
         slidesToScroll: 1,
         variableWidth: true,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 1000,
         centerMode: true,
         // appendArrows: $('.arrowsа'),
         responsive: [
             {
-                breakpoint: 1400,
+                breakpoint: 1000,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    centerPadding: '40px',
-                    centerMode: true,
+                    variableWidth: true,
+                    autoplay: false,
+                    autoplaySpeed: 1000,
+                    centerMode: false,
                 }
             }
         ]
@@ -58,11 +60,9 @@ active_process();
 function process (staff) {
     let id = $(staff).attr('id');
     $('.block-description').each(function () {
-        $(this).removeClass('ddr');
+        $(this).removeClass('checking-process');
     })
-    $(`#description-${id}`).addClass('ddr');
-
-    console.log(id);
+    $(`#description-${id}`).addClass('checking-process');
 }
 
 function check() {
@@ -76,13 +76,7 @@ function check() {
 }
 check();
 
-$('.open-popup').click(function (e){
-    e.preventDefault();
-    $('.popup-bg').fadeIn(600);
-});
-$('.close-popup, .close').click(function (e){
-    $('.popup-bg').fadeOut(600);
-});
+
 
 
 

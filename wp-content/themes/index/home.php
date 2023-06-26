@@ -9,7 +9,7 @@ Template Name: home
 
     <div class="cover">
         <div class="wrap">
-            <div class="cover_wrap">
+            <div class="cover-wrap">
                 <div class="cover_left">
                     <div class="cover_text">
                         <h1 class="tagline">
@@ -23,14 +23,14 @@ Template Name: home
                         <button class="white-button  popmake-84"><?php the_field( 'submit-application' ); ?></button>
                     </div>
                 </div>
-                <div>
 
-                    <div class="cover_right">
-                        <div class="ratchet_left" id="co1">
+                <div class="cover-right-mobil">
+                    <div class="cover-right">
+                        <div class="ratchet-left" id="co1">
                             <div class="blur_one"></div>
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/Layer_1ratchet.svg">
                         </div>
-                        <div class="ratchet_right" id="co2">
+                        <div class="ratchet-right" id="co2">
                             <div class="blur_two"></div>
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/Layer_1ratchet%20(1).svg">
                         </div>
@@ -44,9 +44,12 @@ Template Name: home
 <div class="slider" id="portfolio">
     <div class="wrap">
         <div id="slider_text">
-            <p class="project_text"><?php the_field( 'projects-text' ); ?></p>
+            <p class="project-text"><?php the_field( 'projects-text' ); ?></p>
         </div>
     </div>
+    <div class="wrap">
+
+
     <div class="slider_wrap">
 
         <div class="autoplay">
@@ -79,31 +82,14 @@ if( $myposts ){
 
 		<?php } } wp_reset_postdata(); // Сбрасываем $post ?>
 
-<!--
-            <div class="slider_items">
-                <div class="item" data-aos="zoom-in" data-aos-duration="600">
-                    <div class="color_opacity"><p class="text_opacity">СМОТРЕТЬ ПРОЕКТ</p></div>
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/slider/example2.png"></div>
-                <div data-aos="zoom-in" data-aos-duration="900">
-                    <p class="slider_name">ВИДЕОСЪЕМКА СВАДЕБ</p>
-                    <p class="slider_information">Предоставление услуг видеосъемки</p>
-                </div>
-            </div>
-            <div class="slider_items">
-                <div class="item" data-aos="zoom-in" data-aos-duration="600">
-                    <div class="color_opacity"><p class="text_opacity">СМОТРЕТЬ ПРОЕКТ</p></div>
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/slider/example3.png"></div>
-                <div data-aos="zoom-in" data-aos-duration="900">
-                    <p class="slider_name">OMBT POOL</p>
-                    <p class="slider_information"> </p>
-                </div>
-            </div> -->
 
         </div>
+    </div>
+
         <div class="wrap">
             <div class="arrows">
                 <div class="prev">
-                    <button class=" prev_slide"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/slideprev.png"></button>
+                    <button class=" prev_slide"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/slideprev.svg"></button>
                 </div>
                 <div class="next">
                     <button class=" next_slide"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/slidenext.svg"></button>
@@ -260,60 +246,10 @@ if( $myposts ){
     </div>
 </div>
 <div class="popup-bg">
-    <div class="close">
-
-    </div>
     <div class="popup">
-        <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/close.png" class="close-popup">
+        <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/close.png">
     <?php echo do_shortcode('[contact-form-7 id="74" title="Contact form"]')?>
     </div>
 </div>
-<!--    <div class="form">-->
-<!--        <div class="form-left">-->
-<!--            <div class="form-title">Обсудим ваш проект</div>-->
-<!--            <input type="text" name="" id="" class="input-text input-description" placeholder="Напишите вашу отрасль*">-->
-<!--            <div class="border"></div>-->
-<!--            <div class="form-name-email">-->
-<!--                <div class="form-name">-->
-<!--                    <input type="text" class="input-text input-name" placeholder="Имя*">-->
-<!--                    <div class="border"></div>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <input type="email" class="input-text input-email" placeholder="Электронная почта*">-->
-<!--                    <div class="border"></div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="number">-->
-<!--                <input type="number" class="input-text" placeholder="Телефон*">-->
-<!--                <div class="border"></div>-->
-<!--            </div>-->
-<!--            <div class="textarea">-->
-<!--                <p>Пожалуйста, опишите требования вашего проекта *</p>-->
-<!--                <textarea name="" id="" cols="30" rows="10" class="textarea-input"></textarea>-->
-<!--            </div>-->
-<!--            <div class="custom-file">-->
-<!--                <label class="border-file custom-file-label">Прикрепить файл-->
-<!--                <input type="file" class="custom-file-input">-->
-<!--                </label>-->
-<!--                <p class="custom-file-p">Можно прикрепить не более 3 файлов размером до 3 МБ каждый. Форматы doc, docx, pdf, ppt, pptx.</p>-->
-<!--            </div>-->
-<!--            <div class="checkbox">-->
-<!--                <label class="checkbox-label">-->
-<!--                    <input type="checkbox" class="real-checkbox">-->
-<!--                <span class="custom-checkbox"></span>-->
-<!--                   Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности-->
-<!--                </label>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <button class="button-two border-blue">Отправить</button>-->
-<!--            </div>-->
-<!---->
-<!--        </div>-->
-<!--        <div class="form-right">-->
-<!--            <div class="title-right">Связаться с нами:</div>-->
-<!--            <div class="number-right">+7 (921) 157-77-77</div>-->
-<!--            <div class="email-right">info@gmail.com</div>-->
-<!--        </div>-->
-<!--    </div>-->
 
 <?php get_footer(); ?>

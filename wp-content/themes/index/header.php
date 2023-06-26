@@ -30,7 +30,7 @@
                 <?php the_custom_logo( $blog_id ); ?>
                 </div>
 
-                <div class="right_side">
+                <div class="right-side">
                     <nav>
                         <ul>
                             <li><a href="#portfolio"><?php the_field( 'portfolio-text' ); ?></a></li>
