@@ -1538,9 +1538,18 @@ input, textarea{
     .cover-right-mobil{
         z-index: 1;
         position: absolute;
-        left: 70px;
+        left: 75px;
+    }
+    .blur_one{
+        top: -25px;
+        left: 105px;
+        width: 83px;
+        height: 83px;
+        border-radius: 100%;
+        animation: none;
     }
     .ratchet-left{
+        position: relative;
         margin-top: 75px;
         width: 91px;
         height: 91px;
@@ -1605,6 +1614,12 @@ input, textarea{
         background: url("../img/icons/next-phone.svg") no-repeat center;
     }
     .prev_slide{
+        background: url("../img/icons/prev-phone.svg") no-repeat center;
+    }
+    .next_slide:hover{
+        background: url("../img/icons/next-phone.svg") no-repeat center;
+    }
+    .prev_slide:hover{
         background: url("../img/icons/prev-phone.svg") no-repeat center;
     }
     .prev_slide img, .next_slide img{
