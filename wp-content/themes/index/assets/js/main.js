@@ -14,7 +14,7 @@ $(document).ready(function() {
         infinite: true,
         slidesToScroll: 1,
         variableWidth: true,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 1000,
         centerMode: true,
         // appendArrows: $('.arrowsа'),
@@ -32,6 +32,14 @@ $(document).ready(function() {
             }
         ]
     });
+$('.stages-slide').slick({
+    arrows: true,
+    prevArrow: $('.prev-1'),
+    nextArrow: $('.next-1'),
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
+});
 
 
     function setVisible(staff) {

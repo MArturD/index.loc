@@ -210,9 +210,10 @@ if( $myposts ){
         </div>
     </div>
 </div>
-<div class="stages">
+
+<div class="stages-desctop">
     <div class="wrap">
-        <div class="stages_wrap">
+        <div class="stages-wrap">
             <div class="stages_title"><p><?php the_field( 'stages -development-title' ); ?></p></div>
             <div class="process_flex">
             <ol class="process_work">
@@ -233,6 +234,59 @@ if( $myposts ){
         </div>
     </div>
 </div>
+    <div class="stages-mobile">
+        <div class="wrap">
+            <div class="stages-wrap">
+                <div class="stages_title"><p><?php the_field( 'stages -development-title' ); ?></p></div>
+
+                <div class="stages-slide">
+
+                    <div class="stages-slide-item">
+                       <div class="stages-slider-title"><span>1.</span><p><?php the_field( 'first-stage' ); ?></p></div>
+                        <div class="stages-slider-description"><?php the_field( 'first-stage-description' ); ?></div>
+                    </div>
+
+                    <div class="stages-slide-item">
+                        <div class="stages-slider-title"><span>1.</span><p><?php the_field( 'second-stage' ); ?></p></div>
+                        <div class="stages-slider-description"><?php the_field( 'second-stage-description' ); ?></div>
+                    </div>
+
+                    <div class="stages-slide-item">
+                        <div class="stages-slider-title"><span>1.</span><p><?php the_field( 'third-stage' ); ?></p></div>
+                        <div class="stages-slider-description"><?php the_field( 'third-stage-description' ); ?></div>
+                    </div>
+
+
+                </div>
+                <div class="arrows">
+                    <div class="prev prev-1">
+                        <button class=" prev_slide"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/slideprev.svg"></button>
+                    </div>
+                    <div class="next next-1">
+                        <button class=" next_slide"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/slidenext.svg"></button>
+                    </div>
+                </div>
+
+<!--                <div class="process_flex">-->
+<!--                    <ol class="process_work">-->
+<!--                        <li class="process_card" ><span>1.</span><p>--><?php //the_field( 'first-stage' ); ?><!--</p></li>-->
+<!--                        <li class="process_card" ><span>2.</span><p>--><?php //the_field( 'second-stage' ); ?><!--</p></li>-->
+<!--                        <li class="process_card" ><span>3.</span><p>--><?php //the_field( 'third-stage' ); ?><!--</p></li>-->
+<!--                        <li class="process_card" ><span>4.</span><p>--><?php //the_field( 'fourth-stage' ); ?><!--</p></li>-->
+<!--                        <li class="process_card" ><span>5.</span><p>--><?php //the_field( 'fifth-stage' ); ?><!--</p></li>-->
+<!--                    </ol>-->
+<!--                    <div class="process_description">-->
+<!--                        <div class="block-description">--><?php //the_field( 'first-stage-description' ); ?><!--</div>-->
+<!--                        <div class="block-description">--><?php //the_field( 'second-stage-description' ); ?><!--</div>-->
+<!--                        <div class="block-description">--><?php //the_field( 'third-stage-description' ); ?><!--</div>-->
+<!--                        <div class="block-description">--><?php //the_field( 'fourth-stage-description' ); ?><!--</div>-->
+<!--                        <div class="block-description">--><?php //the_field( 'fifth-stage-description' ); ?><!--</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+
 <div class="cooperation">
     <div class="wrap">
         <div class="cooperation_wrap">
