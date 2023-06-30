@@ -84,6 +84,28 @@ function check() {
 }
 check();
 
+function burgerone() {
+    $('.burger-btn').click(function() {
+        $('.burger-btn').toggleClass('active-burger');
+    });
+}
+burgerone();
+function burgertwo() {
+    $('.burger-btn').click(function() {
+        $('.menu-burger-wrap').toggleClass('menu-burger-wrap-active');
+    });
+}
+burgertwo();
+
+function closeBurgerMenu() {
+    $('.menu-burger-list li').click(function() {
+        $('.menu-burger-wrap').removeClass('menu-burger-wrap-active');
+        $('.burger-btn').removeClass('active-burger');
+    });
+}
+
+closeBurgerMenu();
+
 
 
 

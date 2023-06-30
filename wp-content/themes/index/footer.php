@@ -1,7 +1,7 @@
 <footer>
     <div class="wrap">
         <div class="band"></div>
-        <div class="footer-wrap-desctop">
+        <div class="footer-wrap-desctop" id="contacts">
                 <div class="footer_logo">
                     <?php the_custom_logo($blog_id); ?>
                 </div>
@@ -14,7 +14,7 @@
                     <li><a href="#services"><?php the_field('services-text'); ?></a></li>
                 </ul>
             </div>
-            <div class="footer_social" id="contacts">
+            <div class="footer_social" >
                 <p class="footer-title-two"><?php the_field('navigation-text-two'); ?></p>
                 <p class="footer_number"><a
                             href=”tel:<?php the_field('tel-link'); ?>”><?php the_field('tel-title'); ?></a></p>
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-            <div class="footer-wrap-mobile">
+            <div class="footer-wrap-mobile" id="contacts">
 
             <div class="flex-footer-one">
                 <div class="footer_logo">

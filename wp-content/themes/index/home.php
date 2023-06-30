@@ -55,34 +55,68 @@ Template Name: home
         <div class="autoplay">
 
 
-        <?php
-global $post;
+<!--        --><?php
+//global $post;
+//
+//$myposts = get_posts([
+//	'numberposts' => -1,
+//    'category'    => 2,
+//]);
+//
+//if( $myposts ){
+//	foreach( $myposts as $post ){
+//		setup_postdata( $post );
+//		?>
+<!---->
+<!--        <div class="slider_items">-->
+<!--                <div class="item" data-aos="zoom-in" data-aos-duration="600">-->
+<!--                    <div class="color_opacity"><p class="text_opacity">СМОТРЕТЬ ПРОЕКТ</p></div>-->
+<!--                   <img src="--><?php //bloginfo('template_url'); ?><!--/assets/img/slider/example1.png"> -->
+<!--                    --><?php //the_post_thumbnail(); ?>
+<!--                </div>-->
+<!--                <div data-aos="zoom-in" data-aos-duration="900">-->
+<!--                    <p class="slider_name"> --><?php //the_title(); ?><!-- </p>-->
+<!--                    <div class="slider_information"><p class="slider_information"> --><?php //the_content(); ?><!-- </p></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--		--><?php //} } wp_reset_postdata(); // Сбрасываем $post ?>
 
-$myposts = get_posts([
-	'numberposts' => -1,
-    'category'    => 2,
-]);
+           <?php
 
-if( $myposts ){
-	foreach( $myposts as $post ){
-		setup_postdata( $post );
-		?>
+// Check rows existexists.
+if( have_rows('slide') ):
 
+    // Loop through rows.
+    while( have_rows('slide') ) : the_row();
+
+        // Load sub field value.
+        $slide_title = get_sub_field('slide-title');
+        $slide_content = get_sub_field('slide-description');
+        $slide_img = get_sub_field('slide-img');
+        $slide_link = get_sub_field('slide-link');
+        // Do something...
+?>
         <div class="slider_items">
-                <div class="item" data-aos="zoom-in" data-aos-duration="600">
-                    <div class="color_opacity"><p class="text_opacity">СМОТРЕТЬ ПРОЕКТ</p></div>
-                    <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/slider/example1.png"> -->
-                    <?php the_post_thumbnail(); ?>
-                </div>
-                <div data-aos="zoom-in" data-aos-duration="900">
-                    <p class="slider_name"> <?php the_title(); ?> </p>
-                    <div class="slider_information"><p class="slider_information"> <?php the_content(); ?> </p></div>
-                </div>
+            <div class="item" data-aos="zoom-in" data-aos-duration="600">
+                <div class="color_opacity"><p class="text_opacity"><a href="<?php echo $slide_link; ?>">СМОТРЕТЬ ПРОЕКТ</a></p></div>
+                <img src="<?php echo $slide_img; ?>">
             </div>
+            <div data-aos="zoom-in" data-aos-duration="900">
+                <p class="slider_name"> <?php echo $slide_title; ?> </p>
+                <div class="slider_information"><p class="slider_information"> <?php echo $slide_content; ?> </p></div>
+            </div>
+        </div>
 
-		<?php } } wp_reset_postdata(); // Сбрасываем $post ?>
+        <?php
+    // End loop.
+    endwhile;
 
-
+// No value.
+else :
+    // Do something...
+endif;
+?>
         </div>
     </div>
 
@@ -259,30 +293,14 @@ if( $myposts ){
 
                 </div>
                 <div class="arrows">
-                    <div class="prev prev-1">
+                    <div class="prev-1">
                         <button class=" prev_slide"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/slideprev.svg"></button>
                     </div>
-                    <div class="next next-1">
+                    <div class="next-1">
                         <button class=" next_slide"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/slidenext.svg"></button>
                     </div>
                 </div>
 
-<!--                <div class="process_flex">-->
-<!--                    <ol class="process_work">-->
-<!--                        <li class="process_card" ><span>1.</span><p>--><?php //the_field( 'first-stage' ); ?><!--</p></li>-->
-<!--                        <li class="process_card" ><span>2.</span><p>--><?php //the_field( 'second-stage' ); ?><!--</p></li>-->
-<!--                        <li class="process_card" ><span>3.</span><p>--><?php //the_field( 'third-stage' ); ?><!--</p></li>-->
-<!--                        <li class="process_card" ><span>4.</span><p>--><?php //the_field( 'fourth-stage' ); ?><!--</p></li>-->
-<!--                        <li class="process_card" ><span>5.</span><p>--><?php //the_field( 'fifth-stage' ); ?><!--</p></li>-->
-<!--                    </ol>-->
-<!--                    <div class="process_description">-->
-<!--                        <div class="block-description">--><?php //the_field( 'first-stage-description' ); ?><!--</div>-->
-<!--                        <div class="block-description">--><?php //the_field( 'second-stage-description' ); ?><!--</div>-->
-<!--                        <div class="block-description">--><?php //the_field( 'third-stage-description' ); ?><!--</div>-->
-<!--                        <div class="block-description">--><?php //the_field( 'fourth-stage-description' ); ?><!--</div>-->
-<!--                        <div class="block-description">--><?php //the_field( 'fifth-stage-description' ); ?><!--</div>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
         </div>
     </div>
