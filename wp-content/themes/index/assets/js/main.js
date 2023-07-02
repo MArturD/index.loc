@@ -74,11 +74,11 @@ function process (staff) {
 }
 
 function check() {
-    $('.examination').on('click', () => {
-        if ($('.custom-checkbox').hasClass('checked')) {
-            $('.custom-checkbox').removeClass('checked');
+    $('.checkbox-label').on('click', () => {
+        if ($('.checkbox-label').hasClass('checked')) {
+            $('.checkbox-label').removeClass('checked');
         } else {
-            $('.custom-checkbox').addClass('checked');
+            $('.checkbox-label').addClass('checked');
         }
     });
 }

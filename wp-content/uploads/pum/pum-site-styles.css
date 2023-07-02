@@ -1,6 +1,6 @@
 /**
  * Do not touch this file! This file created by the Popup Maker plugin using PHP
- * Last modified time: Июн 19 2023, 04:42:45
+ * Last modified time: Июл 02 2023, 12:20:03
  */
 
 
@@ -16,7 +16,7 @@
 .pum-theme-75 .pum-container, .pum-theme-default-theme .pum-container { padding: 0px; border-radius: 0px; border: 1px none #000000; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.00 ); background-color: rgba( 249, 249, 249, 0.00 ) } 
 .pum-theme-75 .pum-title, .pum-theme-default-theme .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Georgia; font-weight: 400; font-size: 0px; line-height: 0px } 
 .pum-theme-75 .pum-content, .pum-theme-default-theme .pum-content { color: #0a0a0a; font-family: Sans-Serif; font-weight: 400 } 
-.pum-theme-75 .pum-content + .pum-close, .pum-theme-default-theme .pum-content + .pum-close { position: absolute; height: 20px; width: 20px; left: auto; right: 27px; bottom: auto; top: 11px; padding: 0px; color: #ffffff; font-family: inherit; font-weight: 400; font-size: 8px; line-height: 8px; border: 1px none #ffffff; border-radius: 0px; box-shadow: -50px -50px 0px -100px rgba( 2, 2, 2, 0.00 ); text-shadow: -50px -50px 0px rgba( 0, 0, 0, 0.00 ); background-color: rgba( 255, 255, 255, 0.00 ) } 
+.pum-theme-75 .pum-content + .pum-close, .pum-theme-default-theme .pum-content + .pum-close { position: absolute; height: 20px; width: 20px; left: auto; right: 27px; bottom: auto; top: -11px; padding: 0px; color: #ffffff; font-family: inherit; font-weight: 400; font-size: 8px; line-height: 8px; border: 1px none #ffffff; border-radius: 0px; box-shadow: -50px -50px 0px -100px rgba( 2, 2, 2, 0.00 ); text-shadow: -50px -50px 0px rgba( 0, 0, 0, 0.00 ); background-color: rgba( 255, 255, 255, 0.00 ) } 
 
 /* Popup Theme 76: Light Box */
 .pum-theme-76, .pum-theme-lightbox { background-color: rgba( 0, 0, 0, 0.60 ) } 

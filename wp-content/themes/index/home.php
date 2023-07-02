@@ -210,35 +210,35 @@ endif;
                 <div class="flex_card"><p class="card_name"><?php the_field( 'first-service-title' ); ?></p>
                     <p class="card_info"><?php the_field( 'first-service-description' ); ?></p></div>
                 <div class="flex_button">
-                    <button class="card_button"><?php the_field( 'choose-text' ); ?></button>
+                    <button class="card_button popmake-84"><?php the_field( 'choose-text' ); ?></button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
                 <div class="flex_card"><p class="card_name"><?php the_field( 'second-service-title' ); ?></p>
                     <p class="card_info"><?php the_field( 'second-service-description' ); ?></p></div>
                 <div class="flex_button">
-                    <button class="card_button"><?php the_field( 'choose-text' ); ?></button>
+                    <button class="card_button popmake-84"><?php the_field( 'choose-text' ); ?></button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
                 <div class="flex_card"><p class="card_name"><?php the_field( 'third-service-title' ); ?></p>
                     <p class="card_info"><?php the_field( 'third-service-description' ); ?></p></div>
                 <div class="flex_button">
-                    <button class="card_button"><?php the_field( 'choose-text' ); ?></button>
+                    <button class="card_button popmake-84"><?php the_field( 'choose-text' ); ?></button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
                 <div class="flex_card"><p class="card_name"><?php the_field( 'fourth-service-title' ); ?></p>
                     <p class="card_info"><?php the_field( 'fourth-service-description' ); ?></p></div>
                 <div class="flex_button">
-                    <button class="card_button"><?php the_field( 'choose-text' ); ?></button>
+                    <button class="card_button popmake-84"><?php the_field( 'choose-text' ); ?></button>
                 </div>
             </div>
             <div class="cards_services" data-aos="zoom-in" data-aos-duration="600">
                 <div class="flex_card"><p class="card_name"><?php the_field( 'fifth-service-title' ); ?></p>
                     <p class="card_info"><?php the_field( 'fifth-service-description' ); ?></p></div>
                 <div class="flex_button">
-                    <button class="card_button"><?php the_field( 'choose-text' ); ?></button>
+                    <button class="card_button popmake-84"><?php the_field( 'choose-text' ); ?></button>
                 </div>
             </div>
         </div>
@@ -312,14 +312,13 @@ endif;
             <div class="application">
                 <div class="application_title"><p>Готовы обсудить проект?</p></div>
                 <div class="application_description"><p>Оставьте заявку и мы свяжемся с вами в течение 24 часов.</p></div>
-                <button class="application_button "><?php the_field( 'submit-application' ); ?></button>
+                <button class="application_button popmake-84"><?php the_field( 'submit-application' ); ?></button>
             </div>
         </div>
     </div>
 </div>
 <div class="popup-bg">
     <div class="popup">
-        <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/close.png">
     <?php echo do_shortcode('[contact-form-7 id="74" title="Contact form"]')?>
     </div>
 </div>
