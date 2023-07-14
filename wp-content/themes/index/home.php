@@ -46,41 +46,11 @@ Template Name: home
         <div id="slider_text">
             <p class="project-text"><?php the_field( 'projects-text' ); ?></p>
         </div>
-    </div>
-    <div class="wrap">
-
 
     <div class="slider_wrap">
-
         <div class="autoplay">
 
 
-<!--        --><?php
-//global $post;
-//
-//$myposts = get_posts([
-//	'numberposts' => -1,
-//    'category'    => 2,
-//]);
-//
-//if( $myposts ){
-//	foreach( $myposts as $post ){
-//		setup_postdata( $post );
-//		?>
-<!---->
-<!--        <div class="slider_items">-->
-<!--                <div class="item" data-aos="zoom-in" data-aos-duration="600">-->
-<!--                    <div class="color_opacity"><p class="text_opacity">СМОТРЕТЬ ПРОЕКТ</p></div>-->
-<!--                   <img src="--><?php //bloginfo('template_url'); ?><!--/assets/img/slider/example1.png"> -->
-<!--                    --><?php //the_post_thumbnail(); ?>
-<!--                </div>-->
-<!--                <div data-aos="zoom-in" data-aos-duration="900">-->
-<!--                    <p class="slider_name"> --><?php //the_title(); ?><!-- </p>-->
-<!--                    <div class="slider_information"><p class="slider_information"> --><?php //the_content(); ?><!-- </p></div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--		--><?php //} } wp_reset_postdata(); // Сбрасываем $post ?>
 
            <?php
 
@@ -120,7 +90,7 @@ endif;
         </div>
     </div>
 
-        <div class="wrap">
+
             <div class="arrows">
                 <div class="prev">
                     <button class=" prev_slide"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/slideprev.svg"></button>
@@ -129,10 +99,11 @@ endif;
                     <button class=" next_slide"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/slidenext.svg"></button>
                 </div>
             </div>
-        </div>
+
     </div>
 
 </div>
+
 <div class="about" id="about">
     <div class="wrap">
         <div class="about_wrap">

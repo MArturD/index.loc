@@ -11,7 +11,10 @@
     /*font-display: swap;*/
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@font-face {
+    font-family: 'Inter';
+}
+
 
 * {
     margin: 0;
@@ -59,6 +62,9 @@ a, button{
     justify-content: space-between;
 }
 .menu-burger{
+    display: none;
+}
+.burger-btn{
     display: none;
 }
 
@@ -410,7 +416,7 @@ nav a {
     position: absolute;
     top: 50%;
     left: 35%;
-    width: 100%;
+    /*width: 100%;*/
 }
 .text_opacity a{
     list-style-type: none;
@@ -634,15 +640,13 @@ nav a {
 
 .description_avatar {
     display: flex;
-    align-items: flex-end;
-
-
+    align-items: center;
+    margin-top: 20px;
 }
 
 .avatar {
     width: 70px;
     height: 70px;
-    margin-top: 20px;
     padding: 5px;
     background: linear-gradient(133.99deg, #F2F3F7 7.98%, #DEDFE3 93.51%);
     box-shadow: 5px 5px 20px rgba(59, 109, 170, 0.4), -3px -3px 15px rgba(255, 255, 255, 0.6);
@@ -1114,8 +1118,21 @@ footer{
     color: #414242;
 }
 .footer_mail{
-    margin-top: 7px;
 }
+.language-burger{
+    display: flex;
+    gap: 10px;
+}
+.language_button-burger{
+    color: var(--color-1-darl-grey, #414242);
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
 .social_cards{
     display: flex;
     gap: 20px;
@@ -1226,72 +1243,55 @@ input, textarea{
     padding-top: 20px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 450px) {
     .wrap{
-        width: 280px;
+        width: calc(100% - 50px);
+        margin: 0 auto;
+    }
+    .burger-wrap{
+        z-index: 19;
+        display: none;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .menu-burger-active{
+        display: flex;
     }
     .menu-burger{
-        z-index: 19;
-        display: block;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
         position: absolute;
-
-    }
-    .menu-burger-wrap{
-        margin: 0 auto;
-        z-index: 20;
-        position: absolute;
-        display: none;
-        justify-content: space-between;
-        transition: all 25s;
-    }
-    .menu-burger-wrap-active{
-        display: flex;
-        transition: 25s;
-    }
-    .burger-fon{
-        display: flex;
-        justify-content: flex-end;
-        left: 0;
-        width: 320px;
-        height: 350px;
-        background: linear-gradient(0deg, rgba(49, 84, 125, 0.39) 0%, rgba(49, 84, 125, 0.39) 100%), linear-gradient(160deg, #EBECF0 0%, #C6D4E9 100%);
-    }
-    .burger-right{
-        padding: 30px 10px;
-        width: 200px;
-        height: 350px;
-        background:  #EBECF0;
-        display: flex;
-        justify-content: space-between;
+        background-color: #EBECF0;
+        height: 100%;
+        padding: 34px 133px 0 13px;
     }
     .menu-burger-list ul{
-        margin-top: 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
         gap: 5px;
     }
-    .menu-burger-list nav{
-        transition: all 25s;
-    }
-    .menu-burger-list a{
-        color: var(--color-1-darl-grey, #414242);
+    .menu-burger a{
         font-size: 10px;
-        font-family: Inter;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
     }
-    .burger-menu-flex{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .menu-burger ul{
+        padding: 0;
     }
+    .burger-social{
+        margin-top: 150px;
+    }
+    .language-burger{
+        margin-top: 10px;
+    }
+
     .burger-btn{
-        margin-top: 20px;
+        display: block;
+        /*margin-top: 20px;*/
         z-index: 30;
         padding: 0;
-        top: 0;
-        left: 275px;
+        top: 20px;
+        left: -20px;
         border: none;
         font: inherit;
         color: inherit;
@@ -1326,8 +1326,8 @@ input, textarea{
     }
 
     .active-burger{
-        margin-top: 10px;
-        left: 295px;
+        /*margin-top: 10px;*/
+        left: -20px;
     }
     .active-burger span{
         height: 0;
@@ -1441,6 +1441,10 @@ input, textarea{
     }
     .text_opacity{
         font-size: 12px;
+        left: 30%;
+    }
+    .text_opacity a{
+        font-size: 12px;
     }
     .slider_items{
         width: 280px;
@@ -1518,17 +1522,17 @@ input, textarea{
     }
     .team_description{
         margin-top: 20px;
-        padding: 10px 9px;
+        padding: 30px 20px;
     }
     .description_title{
         width: 262px;
         font-size: 10px;
     }
     .description_avatar{
-        align-items: flex-end;
+        align-items: center;
+        margin-top: 10px;
     }
     .avatar{
-        margin-top: 10px;
         width: 25px;
         height: 25px;
         padding: 2px 1px 1px 1px;
@@ -1566,11 +1570,13 @@ input, textarea{
         gap: 20px;
     }
     .cards_description{
+        margin: 0 auto;
         width: 276px;
         font-size: 16px;
         padding-bottom: 28px;
     }
     .cards_services{
+        margin: 0 auto;
         padding: 30px 20px 40px 20px;
         height: 210px;
     }
@@ -1667,7 +1673,7 @@ input, textarea{
     }
     .footer_social{
         font-size: 10px;
-        margin-bottom: 30px;
+        padding-bottom: 30px;
     }
     .footer_number{
         margin-top: 10px;
@@ -1677,6 +1683,12 @@ input, textarea{
     }
     .footer_mail{
         margin-top: 5px;
+        color: var(--color-1-darl-grey, #414242);
+        font-family: Vela Sans;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
     }
     .social_cards{
         margin-top: 10px;
@@ -2088,5 +2100,22 @@ input, textarea{
     .form-mail{
         margin-top: 5px;
         font-size: 8px;
+    }
+}
+@media (max-width: 1000px) and (min-width: 460px) {
+    .wrap {
+        width: calc(100% - 40px);
+    }
+    .cards_description{
+        margin: 0 auto;
+    }
+    .cards_services{
+        margin: 0 auto;
+    }
+    .about_wrap{
+        gap: 15px;
+    }
+    .about_description{
+        gap: 10px;
     }
 }

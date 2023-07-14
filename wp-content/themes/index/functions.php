@@ -1,30 +1,15 @@
 <?php
 
 function index_assets() {
-//    wp_enqueue_style( 'googleapis.com', "https://fonts.googleapis.com" );
-//    wp_enqueue_style( 'gstatic.com', "https://fonts.gstatic.com" );
-//    wp_enqueue_style( 'fonts.googleapis.com', "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" );
+    wp_enqueue_style( 'inter1', "https://fonts.googleapis.com" );
+    wp_enqueue_style( 'inter2', "https://fonts.gstatic.com");
+    wp_enqueue_style( 'inter3', "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
     wp_enqueue_style( 'aos.css', "https://unpkg.com/aos@2.3.1/dist/aos.css" );
     wp_enqueue_style( 'slick.css', get_template_directory_uri() . '/assets/slick/slick.css' );
     wp_enqueue_style( 'slick-theme.css', get_template_directory_uri() . '/assets/slick/slick-theme.css' );
     wp_enqueue_style( 'main.css', get_template_directory_uri() . '/assets/css/main.css' );
-
-    // wp_enqueue_style( 'slick.css', get_template_directory_uri() . '/assets/slick/slick.css' );
-    // wp_enqueue_style( 'slick.css', get_template_directory_uri() . '/assets/slick/slick.css' );
-
-    // wp_enqueue_style( 'hamb', get_template_directory_uri() . '/assets/css/hamburgers/hamburgers.min.css' );
-
-    // wp_enqueue_style( 'owl', get_template_directory_uri() . '/assets/css/owl.carousel.min.css' );
-
-    // wp_enqueue_style( 'icomoon', get_template_directory_uri() . '/assets/fonts/icomoon/style.css' );
-    
-    // wp_enqueue_style( 'anim', get_template_directory_uri() . '/assets/css/animsition.min.css' );
-
-	// wp_enqueue_style( 'maincss', get_template_directory_uri() . '/assets/css/style.css' );
-
     wp_enqueue_script( 'slick.min.js', get_template_directory_uri() . '/assets/slick/slick.min.js', array(), '20151215', true );
     wp_enqueue_script( 'main.js', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
-    
     // wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
 }
 //index_assets();

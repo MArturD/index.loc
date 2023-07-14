@@ -16,11 +16,11 @@ $(document).ready(function() {
         variableWidth: true,
         autoplay: true,
         autoplaySpeed: 1000,
-        centerMode: true,
+        // centerMode: true,
         // appendArrows: $('.arrowsа'),
         responsive: [
             {
-                breakpoint: 1000,
+                breakpoint: 500,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -92,19 +92,11 @@ function burgerone() {
 burgerone();
 function burgertwo() {
     $('.burger-btn').click(function() {
-        $('.menu-burger-wrap').toggleClass('menu-burger-wrap-active');
+        $('.burger-wrap').toggleClass('menu-burger-active');
     });
 }
 burgertwo();
 
-function closeBurgerMenu() {
-    $('.menu-burger-list li').click(function() {
-        $('.menu-burger-wrap').removeClass('menu-burger-wrap-active');
-        $('.burger-btn').removeClass('active-burger');
-    });
-}
-
-closeBurgerMenu();
 
 
 
