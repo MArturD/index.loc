@@ -293,5 +293,77 @@ endif;
     <?php echo do_shortcode('[contact-form-7 id="74" title="Contact form"]')?>
     </div>
 </div>
+<?php //echo do_shortcode('[contact-form-7 id="74" title="Contact form"]')?>
+<!--    <div class="form">-->
+<!--        <div class="form-left">-->
+<!--            <div class="form-left-title">-->
+<!--                <p>Обсудим ваш проект</p>-->
+<!--            </div>-->
+<!--            <div class="industry">-->
+<!--                [text* text-722 class:industry-input class:input-decoration placeholder "Напишите вашу отрасль*"]-->
+<!--            </div>-->
+<!---->
+<!--            <div class="input-flex">-->
+<!--                [text* text-722 class:input-decoration placeholder "Имя*"]-->
+<!--                [email* email-63 class:input-decoration placeholder "Электронная почта*"]-->
+<!--            </div>-->
+<!---->
+<!--            <div class="form-three">-->
+<!--                [number* number-900 min:5 max:15 class:form-three-input class:input-decoration "Телефон*"]-->
+<!--            </div>-->
+<!---->
+<!--            <div class="textarea">-->
+<!---->
+<!--                <div class="textarea-title">-->
+<!---->
+<!--                    <p>Пожалуйста, опишите требования вашего проекта *</p>-->
+<!---->
+<!--                    <div class="border-textarea">-->
+<!--                        [textarea* textarea-730 class:textarea-input]-->
+<!--                    </div>-->
+<!---->
+<!--                </div>-->
+<!---->
+<!--            </div>-->
+<!---->
+<!--            <div class="file">-->
+<!---->
+<!--                [file file-146 id:file class:file-input]-->
+<!--                <label for="file" class="file-label white-border">Прикрепить файл</label>-->
+<!---->
+<!--                <p class="file-description">Можно прикрепить не более 3 файлов размером до 3 МБ каждый. Форматы doc, docx, pdf, ppt, pptx.</p>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="checkbox">-->
+<!--                [checkbox* checkbox-492 id:checkbox class:checkbox-input use_label_element]-->
+<!--                <label for="checkbox" class="checkbox-label "></label>-->
+<!--                <p class="checkbox-description">Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности</p>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                [submit class:form-button class:blue-border "Отправить"]-->
+<!--            </div>-->
+<!---->
+<!--            <div class="closed closed-mobile">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">-->
+<!--                    <line x1="1" y1="-1" x2="20.2929" y2="-1" transform="matrix(-0.704457 -0.709747 0.704457 -0.709747 16 15.1125)" stroke="#414242" stroke-width="2" stroke-linecap="round"/>-->
+<!--                    <path d="M1.00049 15L14.5915 1.30694" stroke="#414242" stroke-width="2" stroke-linecap="round"/>-->
+<!--                </svg>-->
+<!--            </div>-->
+<!---->
+<!--        </div>-->
+<!--        <div class="form-right">-->
+<!--            <div class="closed closed-desctop">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">-->
+<!--                    <line x1="1" y1="-1" x2="20.2929" y2="-1" transform="matrix(-0.704457 -0.709747 0.704457 -0.709747 16 15.1125)" stroke="#414242" stroke-width="2" stroke-linecap="round"/>-->
+<!--                    <path d="M1.00049 15L14.5915 1.30694" stroke="#414242" stroke-width="2" stroke-linecap="round"/>-->
+<!--                </svg>-->
+<!--            </div>-->
+<!--            <div class="form-right-title">-->
+<!--                <p>Связаться с нами:</p>-->
+<!--                <div class="form-number">+7 (921) 157-77-77</div>-->
+<!--                <div class="form-mail">info@gmail.com</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
 <?php get_footer(); ?>

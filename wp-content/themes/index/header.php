@@ -30,10 +30,10 @@
                 </nav>
 
                 <div class="burger-social">
-                    <p class="footer_number"><a
-                                href=”tel:<?php the_field('tel-link'); ?>”><?php the_field('tel-title'); ?></a>
+                    <p class="footer_number">
+                        <a href=”tel:<?php the_field('tel-link'); ?>;”><?php the_field('tel-title'); ?></a>
                     </p>
-                    <p class="footer_mail"><?php the_field('email-title'); ?></p>
+                    <p class="footer_mail"><a class="mail-link" href="mailto:<?php the_field('email-link'); ?>;"><?php the_field('email-title'); ?></a></p>
                     <div class="social_cards">
                         <div class="social_card"><a href="<?php the_field('tg-link'); ?>"><img
                                         src="<?php bloginfo('template_url'); ?>/assets/img/icons/tg-icon.svg"></a>
@@ -41,7 +41,7 @@
                         <div class="social_card"><a href="<?php the_field('insta-link'); ?>"><img
                                         src="<?php bloginfo('template_url'); ?>/assets/img/icons/insta-icon.svg"></a>
                         </div>
-                        <div class="social_card"><a href="<?php the_field('email-link'); ?>"><img
+                        <div class="social_card"><a href="mailto:<?php the_field('email-link'); ?>;"><img
                                         src="<?php bloginfo('template_url'); ?>/assets/img/icons/email-icon.svg"></a>
                         </div>
                     </div>
