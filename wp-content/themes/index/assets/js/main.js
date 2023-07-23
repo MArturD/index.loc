@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    $(`#block-person_46`).addClass('visible');
-    $(`#46`).addClass('active_card');
+    $(`#block-person_218`).addClass('visible');
+    $(`#218`).addClass('active_card');
     $(`#description-process-1`).addClass('checking-process');
         $(`#process-1`).addClass('active_process');
 });
@@ -87,6 +87,7 @@ check();
 function burgerone() {
     $('.burger-btn').click(function() {
         $('.burger-btn').toggleClass('active-burger');
+        $('body').toggleClass('no-scroll');
     });
 }
 burgerone();
@@ -96,6 +97,14 @@ function burgertwo() {
     });
 }
 burgertwo();
+function burgerclose() {
+    $('.burger-close').click(function() {
+        $('.burger-wrap').removeClass('menu-burger-active');
+        $('.burger-btn').removeClass('active-burger');
+        $('body').removeClass('no-scroll');
+    });
+}
+burgerclose();
 
 
 

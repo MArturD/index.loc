@@ -22,10 +22,10 @@
 
                 <nav class="menu-burger-list">
                     <ul>
-                        <li><a href="#portfolio"><?php the_field('portfolio-text'); ?></a></li>
-                        <li><a href="#about"><?php the_field('about-text'); ?></a></li>
-                        <li><a href="#services"><?php the_field('services-text'); ?></a></li>
-                        <li><a href="#contacts"><?php the_field('contacts-text'); ?></a></li>
+                        <li><a href="#portfolio" class="burger-close"><?php the_field('portfolio-text'); ?></a></li>
+                        <li><a href="#about" class="burger-close"><?php the_field('about-text'); ?></a></li>
+                        <li><a href="#services" class="burger-close"><?php the_field('services-text'); ?></a></li>
+                        <li><a href="#contact" class="burger-close"><?php the_field('contacts-text'); ?></a></li>
                     </ul>
                 </nav>
 

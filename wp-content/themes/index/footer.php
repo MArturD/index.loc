@@ -14,7 +14,7 @@
                     <li><a href="#services"><?php the_field('services-text'); ?></a></li>
                 </ul>
             </div>
-            <div class="footer_social" >
+            <div class="footer_social">
                 <p class="footer-title-two"><?php the_field('navigation-text-two'); ?></p>
                 <p class="footer_number"><a href=”tel:<?php the_field('tel-link'); ?>;”><?php the_field('tel-title'); ?></a></p>
                 <p class="footer_mail"><a class="mail-link" href="mailto:<?php the_field('email-link'); ?>;"><?php the_field('email-title'); ?></a></p>
@@ -31,7 +31,7 @@
             </div>
         </div>
 
-            <div class="footer-wrap-mobile" id="contacts">
+            <div class="footer-wrap-mobile" id="contact">
 
             <div class="flex-footer-one">
                 <div class="footer_logo">
@@ -52,7 +52,7 @@
 
             <div class="flex-footer-two">
 
-                <div class="footer_social" id="contacts">
+                <div class="footer_social">
                     <p class="footer-title-two"><?php the_field('navigation-text-two'); ?></p>
                     <p class="footer_number"><a href=”tel:<?php the_field('tel-link'); ?>;”><?php the_field('tel-title'); ?></a></p>
 
@@ -76,7 +76,7 @@
 
 
         <div class="band"></div>
-        <div class="privacy_policy"><a href="">Политика конфиденциальности</a></div>
+        <div class="privacy_policy"><a href="<?php  the_field( 'political-link' ); ?>"><?php the_field( 'political-title' ); ?></a></div>
     </div>
 </footer>
 
