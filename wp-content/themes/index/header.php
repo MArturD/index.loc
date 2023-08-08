@@ -17,6 +17,9 @@
     <header>
 
         <div class="burger-wrap">
+            <div class="burger-opacity">
+
+            </div>
 
             <div class="menu-burger">
 
@@ -31,9 +34,11 @@
 
                 <div class="burger-social">
                     <p class="footer_number">
-                        <a href=”tel:<?php the_field('tel-link'); ?>;”><?php the_field('tel-title'); ?></a>
+                        <a href="tel:<?php the_field('tel-link'); ?>"><?php the_field('tel-title'); ?></a>
                     </p>
-                    <p class="footer_mail"><a class="mail-link" href="mailto:<?php the_field('email-link'); ?>;"><?php the_field('email-title'); ?></a></p>
+                    <p class="footer_mail"><a class="mail-link"
+                                              href="mailto:<?php the_field('email-link'); ?>;"><?php the_field('email-title'); ?></a>
+                    </p>
                     <div class="social_cards">
                         <div class="social_card"><a href="<?php the_field('tg-link'); ?>"><img
                                         src="<?php bloginfo('template_url'); ?>/assets/img/icons/tg-icon.svg"></a>
@@ -49,11 +54,14 @@
 
                 <div class="language-burger">
                     <a class="language_button-burger" lang="ru-RU" hreflang="ru-RU" href="http://index.loc/">ru</a>
-                    <a class="language_button-burger" lang="en-GB" hreflang="en-GB" href="http://index.loc/en/home-english/">en</a>
+                    <a class="language_button-burger" lang="en-GB" hreflang="en-GB"
+                       href="http://index.loc/en/home-english/">en</a>
                 </div>
 
             </div>
+
         </div>
+
         <div class="wrap">
             <div class="header_wrap">
 
@@ -74,7 +82,8 @@
 
                     <div class="language">
                         <a class="language_button" lang="ru-RU" hreflang="ru-RU" href="http://index.loc/">RU</a>
-                        <a class="language_button" lang="en-GB" hreflang="en-GB" href="http://index.loc/en/home-english/">EN</a>
+                        <a class="language_button" lang="en-GB" hreflang="en-GB"
+                           href="http://index.loc/en/home-english/">EN</a>
                     </div>
                 </div>
                 <button class="burger-btn ">

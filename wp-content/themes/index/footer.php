@@ -16,7 +16,7 @@
             </div>
             <div class="footer_social">
                 <p class="footer-title-two"><?php the_field('navigation-text-two'); ?></p>
-                <p class="footer_number"><a href=”tel:<?php the_field('tel-link'); ?>;”><?php the_field('tel-title'); ?></a></p>
+                <p class="footer_number"><a href="tel:<?php the_field('tel-link'); ?>"><?php the_field('tel-title'); ?></a></p>
                 <p class="footer_mail"><a class="mail-link" href="mailto:<?php the_field('email-link'); ?>;"><?php the_field('email-title'); ?></a></p>
                 <div class="social_cards">
                     <div class="social_card"><a href="<?php the_field('tg-link'); ?>"><img
@@ -54,9 +54,9 @@
 
                 <div class="footer_social">
                     <p class="footer-title-two"><?php the_field('navigation-text-two'); ?></p>
-                    <p class="footer_number"><a href=”tel:<?php the_field('tel-link'); ?>;”><?php the_field('tel-title'); ?></a></p>
+                    <p class="footer_number"><a href="tel:<?php the_field('tel-link'); ?>"><?php the_field('tel-title'); ?></a></p>
 
-                    <p class="footer_mail"><a class="mail-link" href="mailto:2004misiryun@gmail.com"><?php the_field('email-title'); ?></a></p>
+                    <p class="footer_mail"><a class="mail-link" href="mailto:<?php the_field('email-link'); ?>"><?php the_field('email-title'); ?></a></p>
 
 
                     <div class="social_cards">

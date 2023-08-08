@@ -73,17 +73,6 @@ function process (staff) {
     $(`#description-${id}`).addClass('checking-process');
 }
 
-function check() {
-    $('.checkbox-label').on('click', () => {
-        if ($('.checkbox-label').hasClass('checked')) {
-            $('.checkbox-label').removeClass('checked');
-        } else {
-            $('.checkbox-label').addClass('checked');
-        }
-    });
-}
-check();
-
 function burgerone() {
     $('.burger-btn').click(function() {
         $('.burger-btn').toggleClass('active-burger');
@@ -94,6 +83,8 @@ burgerone();
 function burgertwo() {
     $('.burger-btn').click(function() {
         $('.burger-wrap').toggleClass('menu-burger-active');
+        $('.menu-burger').toggleClass('burger-animate');
+
     });
 }
 burgertwo();
@@ -102,6 +93,7 @@ function burgerclose() {
         $('.burger-wrap').removeClass('menu-burger-active');
         $('.burger-btn').removeClass('active-burger');
         $('body').removeClass('no-scroll');
+        $('.menu-burger').removeClass('burger-animate');
     });
 }
 burgerclose();
